@@ -1,0 +1,47 @@
+@use './variables' as *;
+
+.txt {
+  &-sm {
+    font-size: $text-sm;
+  }
+
+  &-md {
+    font-size: $text-md;
+  }
+
+  &-lg {
+    font-size: $text-lg;
+  }
+
+  &-xl {
+    font-size: $text-xl;
+  }
+
+  &-light {
+    font-weight: $weight-light;
+  }
+
+  &-normal {
+    font-weight: $weight-normal;
+  }
+
+  &-bold {
+    font-weight: $weight-bold;
+  }
+
+  &-bolder {
+    font-weight: $weight-bolder;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-left {
+    text-align: left;
+  }
+
+  &-right {
+    text-align: right;
+  }
+}

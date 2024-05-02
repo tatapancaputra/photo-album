@@ -1,0 +1,40 @@
+@use '@/styles/_variables' as *;
+
+.carousel {
+  height: 140px;
+  overflow-x: auto;
+
+  @media screen and (max-width: $screen-mobile-max) {
+    margin-left: -20px;
+    width: 100vw;
+  }
+
+  .album {
+    width: 140px;
+    height: 100px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #f89f1e;
+
+    &.active {
+      width: 180px;
+      height: 140px;
+
+      .thumbnail {
+        border-bottom-left-radius: 20px;
+      }
+    }
+
+    &-title {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    -webkit-transition: all 150ms ease-in-out;
+    -moz-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+}

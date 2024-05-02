@@ -1,0 +1,71 @@
+@use './variables' as *;
+
+.dark {
+  color: $dark;
+}
+
+.light {
+  color: $light;
+}
+
+.gray {
+  &-dark {
+    color: $gray-dark;
+  }
+
+  &-light {
+    color: $gray-light;
+  }
+}
+
+.accent {
+  color: $accent;
+}
+
+.valid {
+  color: $valid;
+}
+
+.warning {
+  color: $warning;
+}
+
+.error {
+  color: $error;
+}
+
+.bg {
+  &-dark {
+    background-color: $dark;
+  }
+
+  &-light {
+    background-color: $light;
+  }
+
+  &-gray {
+    &-dark {
+      background-color: $gray-dark;
+    }
+
+    &-light {
+      background-color: $gray-light;
+    }
+  }
+
+  &-accent {
+    background-color: $accent;
+  }
+
+  &-valid {
+    background-color: $valid;
+  }
+
+  &-warning {
+    background-color: $warning;
+  }
+
+  &-error {
+    background-color: $error;
+  }
+}

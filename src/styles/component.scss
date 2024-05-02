@@ -1,0 +1,110 @@
+@use './variables' as *;
+
+.btn {
+  --border-radius: 980px;
+
+  min-width: 28px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  white-space: nowrap;
+  column-gap: $gap-md;
+  padding: $gap-lg $gap-xl;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  text-decoration: none;
+  pointer-events: all;
+  cursor: pointer;
+
+  &-sm {
+    font-size: $text-sm;
+    padding: $gap-md $gap-lg;
+  }
+
+  &-lg {
+    font-size: $text-lg;
+    font-weight: $weight-light;
+    column-gap: $gap-lg;
+  }
+
+  &.dark {
+    border-color: $dark;
+  }
+
+  &.light {
+    border-color: $light;
+  }
+
+  &.gray {
+    &-dark {
+      border-color: $gray-dark;
+    }
+
+    &-light {
+      border-color: $gray-light;
+    }
+  }
+
+  &.accent {
+    border-color: $accent;
+  }
+
+  &.valid {
+    border-color: $valid;
+  }
+
+  &.warning {
+    border-color: $warning;
+  }
+
+  &.error {
+    border-color: $error;
+  }
+
+  &-group {
+    display: inline-flex;
+
+    .btn {
+      border-radius: 0px;
+      border-left-width: 0.5px;
+      border-right-width: 0.5px;
+
+      &:first-child {
+        border-top-left-radius: var(--border-radius);
+        border-bottom-left-radius: var(--border-radius);
+        border-left-width: 1px;
+      }
+
+      &:last-child {
+        border-top-right-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
+        border-right-width: 1px;
+      }
+    }
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.card {
+  width: 100%;
+  max-width: $screen-mobile-max;
+  border-radius: $radius-md;
+  background-color: $light;
+  box-shadow: rgba($dark, 0.08) $gap-sm $gap-md $gap-xl 0;
+  overflow: hidden;
+}
